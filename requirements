@@ -1,0 +1,14 @@
+deepdish==0.3.6
+numpy
+nilearn
+pandas
+scikit-image==0.16.2
+scikit-learn
+scipy
+torch==1.7.0
+torch-geometric==1.7.0
+torch-sparse
+torch-scatter
+networkx
+seaborn
+tqdm
