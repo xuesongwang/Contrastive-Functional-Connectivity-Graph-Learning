@@ -3,7 +3,7 @@
 
 This repo hosts the official implementation of our MICCAI 2022 paper.
 <div align="center">
-<img src="./framework.png" width="200px">
+<img src="./framework.png" width="600px">
 </div>
 
 ## Usage
