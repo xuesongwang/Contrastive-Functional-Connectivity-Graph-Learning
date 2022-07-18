@@ -1,7 +1,7 @@
 # Contrastive Functional Connectivity Graph Learning for Population-based fMRI Classification
 #### Authors: [XueSong Wang](https://xuesongwang.github.io/), [Lina Yao](https://www.linayao.com/), [Islem Rekik](https://basira-lab.com/), [Yu Zhang](http://yuzhangresearch.weebly.com/)
 
-This repo hosts the official implementation of our [MICCAI 2022](https://www.researchgate.net/publication/359518349_Contrastive_Graph_Learning_for_Population-based_fMRI_Classification) paper.
+This repo hosts the official implementation of our [MICCAI 2022](https://arxiv.org/abs/2203.14044) paper.
 <div align="center">
 <img src="./framework.png" width="600px">
 </div>
