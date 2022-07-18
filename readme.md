@@ -1,7 +1,7 @@
 # Contrastive Functional Connectivity Graph Learning for Population-based fMRI Classification
 #### Authors: [XueSong Wang](https://xuesongwang.github.io/), [Lina Yao](https://www.linayao.com/), [Islem Rekik](https://basira-lab.com/), [Yu Zhang](http://yuzhangresearch.weebly.com/)
 
-This repo hosts the official implementation of our MICCAI 2022 paper.
+This repo hosts the official implementation of our [MICCAI 2022](https://www.researchgate.net/publication/359518349_Contrastive_Graph_Learning_for_Population-based_fMRI_Classification) paper.
 <div align="center">
 <img src="./framework.png" width="600px">
 </div>
@@ -42,7 +42,7 @@ parser.add_argument('--dataroot', type=str, default='/share/scratch/xuesongwang/
 parser.add_argument('--indim', type=int, default=97, help='feature dim, with PCD information, such as gender, handenss')
 parser.add_argument('--nroi', type=int, default=90, help='num of ROIs')
 ```
-
+3. to generate 'multiviewdata_miccai.pt', go to preprocessing/abide_02-process_data.py and run read_multiview_data()
 
 ## Citation
 If you find the code and dataset useful, please cite our paper.
