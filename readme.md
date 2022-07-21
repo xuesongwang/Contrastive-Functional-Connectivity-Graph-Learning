@@ -21,19 +21,19 @@ To install pyg library, [please refer to the document](https://pytorch-geometric
 ### Dataset 
 **ABIDE / ADHD200**
 
-We treat each fMRI as a brain graph. How to download and construct the graphs?
+We treat each fMRI as a brain graph. To download and construct the graphs:
 ```
 python preprocessing/abide_01-fetch_data.py
 python preprocessing/abide_02-process_data.py
 ```
 
-### How to run classification?
+### To train the classification model:
 Training and testing are integrated in file `main_ABIDE.py`. To run
 ```
 python main_ABIDE.py
 ```
 Note: 
-1. You need to replace the dataroot in main_ABIDE.py with your path where the dataset.pt is located. 
+1. You will need to replace the dataroot in main_ABIDE.py with your own path where the dataset.pt is located. 
 ```
 parser.add_argument('--dataroot', type=str, default='/share/scratch/xuesongwang/nilearn_data/ADHD200/AAL90', help='root directory of the dataset')
 ```
@@ -42,7 +42,7 @@ parser.add_argument('--dataroot', type=str, default='/share/scratch/xuesongwang/
 parser.add_argument('--indim', type=int, default=97, help='feature dim, with PCD information, such as gender, handenss')
 parser.add_argument('--nroi', type=int, default=90, help='num of ROIs')
 ```
-3. to generate 'multiviewdata_miccai.pt', go to preprocessing/abide_02-process_data.py and run read_multiview_data()
+3. To generate 'multiviewdata_miccai.pt', you will need to check preprocessing/abide_02-process_data.py and run read_multiview_data()
 
 ## Citation
 If you find the code and dataset useful, please cite our paper.
@@ -117,9 +117,9 @@ DynamicGraphClassification(
 )
 ```
 
-The best result we have achieved is shown as the following. 
+The best results we have achieved are shown as follows. 
 
-ADHD200 (You can obtain the result by loading the 'CGL_best_encoder.pth' and 'DGC_best_classifier.pth' from saved_model.)
+ADHD200 (You can obtain the result by loading the 'CGL_best_encoder.pth' and 'DGC_best_classifier.pth' from the folder saved_model/)
 ```
          accuracy  sensitivity  specificity       auc
 PK       0.792453     0.608696     0.933333  0.844928
@@ -161,5 +161,5 @@ Training node label rate: 0.68
 
 
 Many thanks to [Dr Xiaoxiao Li](https://xxlya.github.io/xiaoxiao/)
-for clearing out my concerns and sharing their project [BrainGNN](https://github.com/LifangHe/BrainGNN_Pytorch/tree/30b78ae28a1e8d6d23004884b6c8e7010bcaf587)  
+for addressing my concerns and sharing their project [BrainGNN](https://github.com/LifangHe/BrainGNN_Pytorch/tree/30b78ae28a1e8d6d23004884b6c8e7010bcaf587)  
 Also thanks [Dr Sofia Ira Ktena](https://sites.google.com/view/sk1712/home) for providing critical preprocessing steps on FC graphs.
