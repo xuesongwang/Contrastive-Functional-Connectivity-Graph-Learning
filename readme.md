@@ -45,7 +45,7 @@ parser.add_argument('--nroi', type=int, default=90, help='num of ROIs')
 3. To generate 'multiviewdata_miccai.pt', you will need to check preprocessing/abide_02-process_data.py and run read_multiview_data()
 
 ## Citation
-If you find the code and dataset useful, please cite our paper.
+If you find the code and dataset useful, please give this repo a star and cite our paper .
 ```latex
 @article{wang2022contrastive,
   title={Contrastive Graph Learning for Population-based fMRI Classification},
