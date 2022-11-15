@@ -43,19 +43,19 @@ Training and testing are integrated in file `main_ABIDE.py`. To run
 python main_ABIDE.py
 ```
 Note: 
-1. You will need to replace the dataroot in main_ABIDE.py with your own path where the dataset.pt is located. 
+1. You will need to replace the dataroot in main_ABIDE.py / main_ADHD with your own path where the dataset.pt is located. 
 ```
-parser.add_argument('--dataroot', type=str, default='/share/scratch/xuesongwang/nilearn_data/ADHD200/AAL90', help='root directory of the dataset')
+parser.add_argument('--dataroot', type=str, default='/share/scratch/xuesongwang/nilearn_data/ABIDE_pcp/cpac/filt_noglobal/processed/', help='root directory of the dataset')
 ```
 2. If you are trying with your own dataset, indim and nroi should be modified.
 ```
-parser.add_argument('--indim', type=int, default=97, help='feature dim, with PCD information, such as gender, handenss')
-parser.add_argument('--nroi', type=int, default=90, help='num of ROIs')
+parser.add_argument('--indim', type=int, default=206, help='feature dim, #ROIs + #clinical features, such as gender, handenss')
+parser.add_argument('--nroi', type=int, default=200, help='num of ROIs')
 ```
 3. To generate 'multiviewdata_miccai.pt', you will need to check preprocessing/abide_02-process_data.py and run read_multiview_data()
 
 ## Citation
-If you find the code and dataset useful, please cite our paper.
+If you find the code and dataset useful, please give this repo a star and cite our paper .
 ```latex
 @article{wang2022contrastive,
   title={Contrastive Graph Learning for Population-based fMRI Classification},
