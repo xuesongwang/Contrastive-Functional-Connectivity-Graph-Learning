@@ -27,6 +27,16 @@ python preprocessing/abide_01-fetch_data.py
 python preprocessing/abide_02-process_data.py
 ```
 
+you can download "subject_IDs.txt" from Sofia's [project](https://github.com/sk1712/population-gcn)  or generate your own using this sample code:
+```
+# data_folder: folder where you save .h5 files of the subjects, for instance: 50003, 50004, ... 
+subject_IDs = os.listdir(data_folder) 
+with open(os.path.join(data_folder, 'subject_IDs.txt'), "w") as output:
+	for row in subject_IDs:
+		if os.path.isdir(os.path.join(data_folder,row)):
+			output.write(row + '\n')
+```
+
 ### To train the classification model:
 Training and testing are integrated in file `main_ABIDE.py`. To run
 ```
