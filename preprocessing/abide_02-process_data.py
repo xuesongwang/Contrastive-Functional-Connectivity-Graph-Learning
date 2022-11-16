@@ -15,7 +15,8 @@
 
 '''
 if you do not want to denerate multi-view dataset, you can run main(),
-main_multiview() will split the time series into n_views to generate FC matrices
+main_multiview() will split the time series into n_views to generate FC matrices, subject data will be saved in .h5 format
+then, read_multiview_data() will save the whole dataset in .pt file for fast training
 '''
 import sys
 import argparse
@@ -206,8 +207,8 @@ def read_single_multiview_data(data_dir,filename, subject_name):
     return data
 
 
-def read_multiview_data(data_dir='/share/scratch/xuesongwang/nilearn_data/ABIDE_pcp/cpac/filt_noglobal/raw_multiview',
-                        root_dir='/share/scratch/xuesongwang/nilearn_data/ABIDE_pcp/cpac/filt_noglobal/processed'):
+def read_multiview_data(data_dir=os.path.join(data_folder, 'raw_multiview'),
+                        root_dir=os.path.join(data_folder, 'processed')):
     '''
     Preprocessing the subject_ID.h5 files into dataset.pt
         :param data_dir: (str) directory where subject_ID.h5 files are stored
@@ -234,5 +235,10 @@ def read_multiview_data(data_dir='/share/scratch/xuesongwang/nilearn_data/ABIDE_
 
 if __name__ == '__main__':
     # main()
+
+    # STEP 1:
     # main_multiview()
+
+    # STEP 2:
+    # after saving the subject files in .h5, comment main_multiview() and run read_multiview_data()
     read_multiview_data()

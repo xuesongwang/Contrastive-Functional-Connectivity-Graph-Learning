@@ -27,7 +27,8 @@ python preprocessing/abide_01-fetch_data.py
 python preprocessing/abide_02-process_data.py
 ```
 
-you can download "subject_IDs.txt" from Sofia's [project](https://github.com/sk1712/population-gcn)  or generate your own using this sample code:
+Note: 
+1. you can download "subject_IDs.txt" from Sofia's [project](https://github.com/sk1712/population-gcn)  or generate your own using this sample code:
 ```
 # data_folder: folder where you save .h5 files of the subjects, for instance: 50003, 50004, ... 
 subject_IDs = os.listdir(data_folder) 
@@ -36,6 +37,13 @@ with open(os.path.join(data_folder, 'subject_IDs.txt'), "w") as output:
 		if os.path.isdir(os.path.join(data_folder,row)):
 			output.write(row + '\n')
 ```
+2. You will need to change the root_folder and data_folder to your own path in both `abide_01-fetch_data.py` and `abide_02-process_data.py`
+```
+root_folder = '/share/scratch/xuesongwang/nilearn_data/'
+data_folder = os.path.join(root_folder, 'ABIDE_pcp/cpac/filt_noglobal/')
+```
+3. run `main_multiview()` in `abide_02-process_data.py` first to generate .h5 files, then comment the function and run `read_multiview_data()` to save the dataset as .pt
+
 
 ### To train the classification model:
 Training and testing are integrated in file `main_ABIDE.py`. To run
