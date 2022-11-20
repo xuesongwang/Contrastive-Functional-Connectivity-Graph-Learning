@@ -216,7 +216,8 @@ def read_multiview_data(data_dir=os.path.join(data_folder, 'raw_multiview'),
     '''
     from tqdm import tqdm
     import timeit
-
+    if not os.path.exists(root_dir):
+        os.makedirs(root_dir)
     onlyfiles = [f for f in listdir(data_dir) if os.path.isfile(os.path.join(data_dir, f))]
     onlyfiles.sort()
     start = timeit.default_timer()
