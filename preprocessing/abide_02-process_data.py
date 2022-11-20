@@ -30,6 +30,9 @@ from torch_geometric.utils import remove_self_loops
 from torch_sparse import coalesce
 import networkx as nx
 from networkx.convert_matrix import from_numpy_matrix
+PROJECT_ROOT = os.path.abspath(os.path.join(
+                  os.path.dirname(__file__),
+                  os.pardir))
 from modules.loader import Data, MultiviewData
 from preprocessing import Reader
 import torch
