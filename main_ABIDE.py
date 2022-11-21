@@ -60,8 +60,8 @@ dataset = torch.load(os.path.join(dataroot, 'multiviewdata_miccai.pt'))
 
 site_choice = None
 
-# train_id, val_id, test_id = train_val_test_split_abide(dataset=dataset, n_sub=len(dataset))
-train_id, val_id, test_id = train_val_test_split_abide(dataset=dataset, n_sub=len(dataset), drop_sites=None)
+train_id, val_id, test_id = train_val_test_split_abide(dataset=dataset, n_sub=len(dataset))
+#train_id, val_id, test_id = train_val_test_split_abide(dataset=dataset, n_sub=len(dataset), drop_sites=None)
 
 train_dataset = [dataset[i] for i in train_id]
 val_dataset = [dataset[i] for i in val_id]

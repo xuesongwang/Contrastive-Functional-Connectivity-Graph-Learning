@@ -33,6 +33,7 @@ from networkx.convert_matrix import from_numpy_matrix
 PROJECT_ROOT = os.path.abspath(os.path.join(
                   os.path.dirname(__file__),
                   os.pardir))
+sys.path.append(PROJECT_ROOT)
 from modules.loader import Data, MultiviewData
 from preprocessing import Reader
 import torch
