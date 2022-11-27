@@ -115,8 +115,7 @@ if __name__ == '__main__':
     # TASK1: print classification report
     model.evaluation_report(data, mode='test', path=None)
 
-    # TASK2: Visualization on the population graph with four different metrics: label, subtype, site, tr_val_status
+    # TASK2: Visualization on the population graph with four different metrics: label,  site, tr_val_status
     # model.visualize_population_graph(data, choice='label', seed=seed, site=site_choice)
-    # subject_id_cluster = model.visualize_population_graph(data, choice='subtype', seed=seed, site=site_choice)
     # model.visualize_population_graph(data, choice='site', seed=seed)
     # model.visualize_population_graph(data, choice='tr_val_status', seed=seed)
